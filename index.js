@@ -8,7 +8,7 @@ app.post("/webhook", (req, res) => {
     console.log("SE RECIBIO PETICION A WEBHOOK")
     console.log(`req ${req}`)
     console.log(`res ${res}`)
-    res.json({respuesta: "WEBHOOK", fecha: new Date().toISOString()})
+    res.json({respuesta: "WEBHOOK", fecha: new Date().toISOString(),req, res})
 })
 
 app.get("/", (req, res) => {
