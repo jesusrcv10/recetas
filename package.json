@@ -1,22 +1,25 @@
 {
-  "name": "coolnodeapp",
-  "version": "1.0.0",
-  "description": "node index ",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": "",
-  "dependencies": {
-    "express": "h4.16.4"
-  }
+    "name": "coolnodeapp",
+    "version": "1.0.0",
+    "description": "node index ",
+    "main": "index.js",
+    "engines": {
+        "node": "10.3.0"
+    },
+    "scripts": {
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": ""
+    },
+    "homepage": "",
+    "dependencies": {
+        "express": "h4.16.4"
+    }
 }
