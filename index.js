@@ -1,10 +1,23 @@
-const http = require('http');
-const port=process.env.PORT || 3000
-const server = http.createServer((req, res) => {
-res.statusCode = 200;
-res.setHeader('Content-Type', 'text/html');
-res.end('<h1>Hello World</h1>');
-});
-server.listen(port,() => {
-console.log(`Server running at port `+port);
+
+const express = require('express');
+const port = process.env.PORT || 3000
+
+let app = express()
+
+app.post("/webhook", (req, res) => {
+    console.log("SE RECIBIO PETICION A WEBHOOK")
+    console.log(`req ${req}`)
+    console.log(`res ${res}`)
+    res.send("WEBHOOK")
+})
+
+app.get("/", (req, res) => {
+    res.send("INDEX")
+})
+
+app.listen(port, (err) => {
+    if (err)
+        console.log("SERVER NO INICIADO")
+    else
+        console.log(`Server running at port ` + port);
 });
